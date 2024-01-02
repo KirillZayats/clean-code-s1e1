@@ -1,8 +1,23 @@
 /* Basic Style */
-body {
+.page {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0px;
+}
+
+li,
+h3 {
+  list-style: none;
+}
+
+input,
+button {
+  outline: none;
 }
 
 .description {
@@ -16,7 +31,7 @@ body {
   width: 100%;
 }
 
-.description__information {
+.description__info {
   font-family: fantasy, cursive;
 }
 
@@ -43,22 +58,7 @@ body {
   display: flex;
 }
 
-ul {
-  margin: 0;
-  padding: 0px;
-}
-
-li,
-h3 {
-  list-style: none;
-}
-
-input,
-button {
-  outline: none;
-}
-
-button {
+.task__button {
   background: none;
   border: 0px;
   color: #888;
@@ -68,13 +68,13 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.task__button:hover {
   color: #3a3A3a;
 }
 
 /* Heading */
-h3,
-label[for="new-task"] {
+.section__title,
+.container-add__label {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -84,7 +84,8 @@ label[for="new-task"] {
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.task__input {
+  width: 226px;
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -97,17 +98,17 @@ input[type="text"] {
   color: #888;
 }
 
-input[type="text"]:focus {
+.task__input:focus {
   color: #333;
 }
 
 /* New Task */
-label[for="new-task"] {
+.container-add__label {
   display: block;
   margin: 0 0 20px;
 }
 
-input#new-task {
+.container-add__input {
   width: 318px;
 }
 
@@ -126,19 +127,15 @@ input#new-task {
   vertical-align: middle;
 }
 
-.task > input[type="checkbox"] {
+.task__checkbox {
   margin: 0 10px;
 }
 
-.task > label {
+.task__label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
-}
-
-.task > input[type="text"] {
-  width: 226px
 }
 
 .task__button_delete img {
@@ -152,21 +149,21 @@ input#new-task {
 }
 
 /* Completed */
-ul#completed-tasks label {
+#completed-tasks .task__label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.task input[type=text] {
+.task .task__input {
   display: none
 }
 
-.task_edit input[type=text] {
+.task_edit .task__input {
   display: inline-block;
   width: 224px
 }
 
-.task_edit label {
+.task_edit .task__label {
   display: none;
 }

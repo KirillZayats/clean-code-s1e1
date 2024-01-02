@@ -34,13 +34,14 @@ const createNewTaskElement = function (taskString) {
 
   //Each elements, needs appending
   checkBox.type = "checkbox";
+  checkBox.className = "task__checkbox";
   editInput.type = "text";
   editInput.className = "task__input";
 
   editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
-  editButton.className = "task__button_edit";
+  editButton.className = "task__button task__button_edit";
 
-  deleteButton.className = "task__button_delete";
+  deleteButton.className = "task__button task__button_delete";
   deleteButtonImg.src = "./remove.svg";
   deleteButtonImg.alt = "Icon remove";
   deleteButton.appendChild(deleteButtonImg);
